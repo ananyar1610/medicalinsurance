@@ -42,7 +42,7 @@ if page == 'Project Introduction':
 
 
 elif page == 'Data Overview':
-    st.image('images/do_ins.png')
+    st.image('images/do_medins.png')
     st.markdown("""
     # Dataset Overview
     
