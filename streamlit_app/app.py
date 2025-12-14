@@ -5,7 +5,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-df=pd.read_csv('D:\GUVI2\Data\medical_insurance.csv')
+df=pd.read_csv('data/medical_insurance.csv')
 
 st.set_page_config(page_title='Medical Insurance Charges Prediction', layout='wide')
 
@@ -15,6 +15,7 @@ page = st.sidebar.radio('Go to', ['Project Introduction', 'Data Overview', 'Expl
 
 
 if page == 'Project Introduction':
+    st.image('images/medins.png')
     st.markdown("""
     # Medical Insurance Charge Prediction
     
@@ -41,6 +42,7 @@ if page == 'Project Introduction':
 
 
 elif page == 'Data Overview':
+    st.image('images/do_ins.png')
     st.markdown("""
     # Dataset Overview
     
@@ -71,6 +73,7 @@ elif page == 'Data Overview':
 
 # Exploratory Data Analysis Page
 elif page == 'Exploratory Data Analysis':
+    st.image('images/medins.png')
     st.title('Exploratory Data Analysis (EDA)')
 
     analysis_type = st.selectbox(
@@ -202,6 +205,7 @@ elif page == 'Exploratory Data Analysis':
             corr_matrix = df.corr(numeric_only=True)
             st.dataframe(corr_matrix['charges'].sort_values(ascending=False))
 elif page == 'Insurance Estimator':
+    st.image('images/medins.png')
     st.title("Insurance Cost Estimator")
     import joblib
     model=joblib.load('insurance_rf_model.pkl')
